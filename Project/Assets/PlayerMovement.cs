@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
 
-    public float moveSpeed = 200f;
+    public float moveSpeed = 500f;
 
     public Rigidbody2D rb;
 
@@ -22,6 +22,13 @@ public class PlayerMovement : MonoBehaviour
 
         if (movement.x != 0)
             transform.localScale = new Vector3(-1*movement.x,1f,1f);
+
+        /*
+         if (movement.x < 0)
+            transform.Rotate(0f, 180f, 0f);
+        else if (movement.x > 0)
+            tranform.Rotate(0f, 0f, 0f);
+         */
 
     }
 
