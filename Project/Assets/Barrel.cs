@@ -23,6 +23,7 @@ public class Barrel : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
+            Debug.Log("Bullet Fired");
             FireBullet();
         }
     }
@@ -31,5 +32,19 @@ public class Barrel : MonoBehaviour
     {
         GameObject firedBullet = Instantiate(bullet, barrelTip.position, barrelTip.rotation);
         firedBullet.GetComponent<Rigidbody2D>().velocity = barrelTip.up * 10f;
+    }
+
+    void OnTrigger2D(Collider2D hitInfo)
+    {
+        Debug.Log("Hit something");
+        Debug.Log(hitInfo.name);
+
+        Enemy enemy = hitInfo.GetComponent<Enemy>();
+        if (enemy != null)
+        {
+            enemy.Die();
+        }
+
+        Destroy(gameObject);
     }
 }
