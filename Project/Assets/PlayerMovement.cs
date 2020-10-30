@@ -9,9 +9,11 @@ public class PlayerMovement : MonoBehaviour
 
     public Rigidbody2D rb;
 
-    public Transform tranform;
-
     Vector2 movement;
+
+    void Start()
+    {
+    }
 
     // Update is called once per frame
     void Update()

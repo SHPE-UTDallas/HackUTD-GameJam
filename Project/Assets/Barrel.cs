@@ -34,7 +34,7 @@ public class Barrel : MonoBehaviour
         firedBullet.GetComponent<Rigidbody2D>().velocity = barrelTip.up * 10f;
     }
 
-    void OnTrigger2D(Collider2D hitInfo)
+    void OnTriggerEnter2D(Collider2D hitInfo)
     {
         Debug.Log("Hit something");
         Debug.Log(hitInfo.name);
