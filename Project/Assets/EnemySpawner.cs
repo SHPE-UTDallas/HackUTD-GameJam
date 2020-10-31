@@ -11,12 +11,14 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField]
     private Transform spawner;
 
-    private float spawnTimer = 1f;
+    public float spawnTimer = 5f;
+    public float resetValue = 5f;
+    public float timerChange = .4f;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        resetValue = spawnTimer;
     }
 
     // Update is called once per frame
@@ -27,7 +29,11 @@ public class EnemySpawner : MonoBehaviour
         if (spawnTimer <= 0.0f)
         {
             SpawnEnemy();
-            spawnTimer = 1f;
+            spawnTimer = resetValue;
+            if (resetValue >= 1) {
+                resetValue -= timerChange;
+
+            }
         }
     }
 
