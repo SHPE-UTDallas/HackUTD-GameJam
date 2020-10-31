@@ -1,2 +1,9 @@
 # HackUTD-GameJam
-GitHub Repository for our game for the HackUTD GameJam
+Check out our game by clicking [here!](https://itch.io/jam/hackutd-game-jam/rate/805900)
+
+Team Members:
+- Gabriel Flynn
+- Rigre Garciandia
+- Jesus Saenz
+- Abhay Sood
+- Abhay Sood
