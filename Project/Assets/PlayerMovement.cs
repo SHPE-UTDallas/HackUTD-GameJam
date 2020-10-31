@@ -1,13 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class PlayerMovement : MonoBehaviour
 {
 
     public float moveSpeed = 500f;
 
     public Rigidbody2D rb;
+
+    public Text nameText;
+    
+    float timer = 0;
 
     Vector2 movement;
 
@@ -25,6 +29,8 @@ public class PlayerMovement : MonoBehaviour
         if (movement.x != 0)
             transform.localScale = new Vector3(-1*movement.x,1f,1f);
 
+        timer += Time.deltaTime;    
+        nameText.text = "Time Survived: " + (int)timer;
         /*
          if (movement.x < 0)
             transform.Rotate(0f, 180f, 0f);
