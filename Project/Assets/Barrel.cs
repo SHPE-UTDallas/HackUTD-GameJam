@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Barrel : MonoBehaviour
 {
@@ -39,12 +40,13 @@ public class Barrel : MonoBehaviour
         Debug.Log("Hit something");
         Debug.Log(hitInfo.name);
 
-        Enemy enemy = hitInfo.GetComponent<Enemy>();
-        if (enemy != null)
-        {
-            enemy.Die();
-        }
+        SceneManager.LoadScene("SampleScene");
+        // Enemy enemy = hitInfo.GetComponent<Enemy>();
+        // if (enemy != null)
+        // {
+        //     enemy.Die();
+        // }
 
-        Destroy(gameObject);
+        // Destroy(gameObject);
     }
 }
